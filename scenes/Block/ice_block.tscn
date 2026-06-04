@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ch404u736h3te"]
+
+[ext_resource type="PackedScene" uid="uid://xlim4p5m5cq2" path="res://scenes/Block/block.tscn" id="1_dskr3"]
+[ext_resource type="Texture2D" uid="uid://c5d3vhyogjl7k" path="res://assets/Backgrounds/Tilesets/TilesetDungeon.png" id="2_m4y2x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqawr"]
+atlas = ExtResource("2_m4y2x")
+region = Rect2(0, 32, 16, 16)
+
+[node name="IceBlock" unique_id=191489946 instance=ExtResource("1_dskr3")]
+linear_damp = 0.2
+
+[node name="Sprite2D" parent="." index="0" unique_id=982265615]
+texture = SubResource("AtlasTexture_iqawr")

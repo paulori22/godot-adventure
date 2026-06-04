@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bhy2faqm2lfh6"]
+
+[ext_resource type="Texture2D" uid="uid://c5d3vhyogjl7k" path="res://assets/Backgrounds/Tilesets/TilesetDungeon.png" id="1_isp6l"]
+[ext_resource type="Script" uid="uid://xsi8bfpkuyva" path="res://scenes/Switch/switch.gd" id="1_rtsvu"]
+[ext_resource type="AudioStream" uid="uid://bs5stqk32j180" path="res://assets/Sounds/Game/Magic1.wav" id="3_a6sob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtsvu"]
+size = Vector2(16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6sob"]
+atlas = ExtResource("1_isp6l")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gei12"]
+atlas = ExtResource("1_isp6l")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4vo0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6sob")
+}],
+"loop": true,
+"name": &"activated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gei12")
+}],
+"loop": true,
+"name": &"deactivated",
+"speed": 5.0
+}]
+
+[node name="Switch" type="StaticBody2D" unique_id=1829404451 groups=["interactable"]]
+script = ExtResource("1_rtsvu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1880382236]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_rtsvu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1695632118]
+sprite_frames = SubResource("SpriteFrames_r4vo0")
+animation = &"deactivated"
+autoplay = "deactivated"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=878396024]
+stream = ExtResource("3_a6sob")

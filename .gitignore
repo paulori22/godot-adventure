@@ -1,0 +1,54 @@
+# —— Godot 4+ (never commit the import/cache folder; it is regenerated) ——
+.godot/
+.import/
+
+# —— Export build outputs (adjust names if you use a custom export path) ——
+/android/
+/build/
+/export/
+/exports/
+/dist/
+/ios/
+# Local HTML5 export
+/web/
+
+# —— Optional: version-control-friendly export presets, but with secrets
+#     (Android keystore passwords, one-click deploy paths) commit only after
+#     redacting, or keep private and use CI secrets instead.
+# —— Uncomment if you must not commit presets at all:
+# export_presets.cfg
+
+# —— C# / Mono (harmless for GDScript-only projects) ——
+# Mono
+data_*/
+*.csproj
+*.sln
+.mono/
+mono_crash.*.json
+obj/
+bin/
+*.pidb
+*.pdb
+*.userprefs
+
+# —— OS and editors ——
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+*~
+*.swp
+*.swo
+*.swn
+*.log
+*.tmp
+
+# —— IDE (uncomment to ignore; many teams keep shared .vscode) ——
+# .idea/
+.vscode/settings.json
+
+# —— Environment secrets ——
+.env

@@ -1,0 +1,55 @@
+# Default: normalize EOL in text; Git detects text vs binary.
+* text=auto eol=lf
+
+# Godot text formats (always LF, avoid spurious diffs on Windows)
+*.gd       text eol=lf
+*.tscn     text eol=lf
+*.tres     text eol=lf
+*.godot    text eol=lf
+*.gdshader text eol=lf
+*.csn      text eol=lf
+# Import sidecar files
+*.import   text eol=lf
+
+# Shaders, configs often edited as text
+*.glslinc  text eol=lf
+*.vsh      text eol=lf
+*.fsh      text eol=lf
+
+# Vector / markup often committed as text
+*.svg      text eol=lf
+*.tpset    text eol=lf
+
+# Binary assets: never apply CRLF/LF conversion
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.webp     binary
+*.bmp      binary
+*.tga      binary
+*.exr      binary
+*.hdr      binary
+*.dds      binary
+*.icns     binary
+*.ktx      binary
+*.pkm      binary
+*.basis    binary
+*.gltf     text eol=lf
+*.glb      binary
+*.scn      binary
+*.res      binary
+# Audio / video
+*.mp3      binary
+*.ogg      binary
+*.wav      binary
+*.ogv      binary
+*.mp4      binary
+*.webm     binary
+# Fonts
+*.ttf      binary
+*.otf      binary
+*.ttc      binary
+# Archives / misc
+*.zip      binary
+*.7z       binary
+*.pck      binary

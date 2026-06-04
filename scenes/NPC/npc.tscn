@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://g7ixwp3dbs6k"]
+
+[ext_resource type="Script" uid="uid://ddted5rtd1mn6" path="res://scenes/NPC/npc.gd" id="1_0c0is"]
+[ext_resource type="Texture2D" uid="uid://ccl1fdq6r3yuk" path="res://assets/Actor/Characters/NinjaBlue/SpriteSheet.png" id="1_36vut"]
+[ext_resource type="Texture2D" uid="uid://bmg3j0jvdxwtw" path="res://assets/Ui/Dialog/DialogBoxFaceset.png" id="3_lwet7"]
+[ext_resource type="Texture2D" uid="uid://nec2mvuiltob" path="res://assets/Actor/Characters/NinjaBlue/Faceset.png" id="4_ehwui"]
+[ext_resource type="AudioStream" uid="uid://dikenfiuuj6q1" path="res://assets/Sounds/Game/MiniImpact.wav" id="5_c4wbl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c0is"]
+atlas = ExtResource("1_36vut")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lwet7"]
+radius = 7.0
+height = 18.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_lwet7"]
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ehwui"]
+font_size = 28
+
+[node name="NPC" type="StaticBody2D" unique_id=1064329577 groups=["interactable"]]
+process_mode = 3
+script = ExtResource("1_0c0is")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=306012510]
+texture = SubResource("AtlasTexture_0c0is")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=806104518]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_lwet7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888516724]
+visible = false
+
+[node name="DialogBoxTexture" type="TextureRect" parent="CanvasLayer" unique_id=1600350309]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -547.0
+offset_top = -234.0
+offset_right = -247.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("3_lwet7")
+
+[node name="NPCFaceIcon" type="TextureRect" parent="CanvasLayer/DialogBoxTexture" unique_id=1334556265]
+layout_mode = 0
+offset_left = 5.9459457
+offset_top = 14.054053
+offset_right = 45.945946
+offset_bottom = 54.054054
+texture = ExtResource("4_ehwui")
+
+[node name="DialogText" type="Label" parent="CanvasLayer" unique_id=274772668]
+offset_left = 216.0
+offset_top = 467.0
+offset_right = 1117.0
+offset_bottom = 607.0
+text = "Hello World"
+label_settings = SubResource("LabelSettings_lwet7")
+autowrap_mode = 3
+
+[node name="NameText" type="Label" parent="CanvasLayer" unique_id=849063657]
+offset_left = 51.0
+offset_top = 414.0
+offset_right = 276.0
+offset_bottom = 453.0
+text = "Blue Ninja"
+label_settings = SubResource("LabelSettings_ehwui")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1918463542]
+stream = ExtResource("5_c4wbl")
