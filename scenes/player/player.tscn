@@ -30,10 +30,6 @@ region = Rect2(16, 0, 16, 16)
 atlas = ExtResource("2_dovo2")
 region = Rect2(0, 96, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_28m0y"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(16, 80, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_uniwh"]
 atlas = ExtResource("2_dovo2")
 region = Rect2(0, 80, 16, 16)
@@ -45,6 +41,10 @@ region = Rect2(32, 80, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tffgl"]
 atlas = ExtResource("2_dovo2")
 region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28m0y"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(16, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dovo2"]
 atlas = ExtResource("2_dovo2")
@@ -154,18 +154,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_28m0y")
-}],
-"loop": true,
-"name": &"jump_back",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_uniwh")
 }],
 "loop": true,
-"name": &"jump_front",
+"name": &"jump_down",
 "speed": 5.0
 }, {
 "frames": [{
@@ -182,6 +174,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28m0y")
+}],
+"loop": true,
+"name": &"jump_up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -483,16 +483,18 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" unique_id=1575865030]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 69
 script = ExtResource("1_dovo2")
+
+[node name="ShadowSprite2D" type="Sprite2D" parent="." unique_id=177802095]
+position = Vector2(0, 8)
+texture = ExtResource("4_5gtgg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1775138473]
 sprite_frames = SubResource("SpriteFrames_je7p5")
 animation = &"jump_right"
 autoplay = "move_down"
-
-[node name="ShadowSprite2D" type="Sprite2D" parent="." unique_id=177802095]
-texture = ExtResource("4_5gtgg")
+frame_progress = 0.30803624
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1231409821]
 position = Vector2(0, 2)
@@ -518,6 +520,7 @@ one_shot = true
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=71486757]
 collision_layer = 2
+collision_mask = 97
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1846058608]
 shape = SubResource("RectangleShape2D_dovo2")

@@ -826,6 +826,7 @@ tile_set = SubResource("TileSet_rd1n5")
 
 [node name="Player" parent="ObstacleLayer" unique_id=1575865030 instance=ExtResource("1_nmxv4")]
 position = Vector2(0, 40)
+collision_mask = 65
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="ObstacleLayer/Player" unique_id=992335041]

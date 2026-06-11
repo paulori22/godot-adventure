@@ -871,19 +871,15 @@ position = Vector2(151, -58)
 
 [node name="IceBlock" parent="." unique_id=1409508062 instance=ExtResource("8_1vkqi")]
 position = Vector2(127, -8)
-collision_layer = 1
-collision_mask = 1
 
 [node name="LockedDoor3" parent="." unique_id=445003405 instance=ExtResource("5_4esai")]
 position = Vector2(87, -8)
 
 [node name="SingleUsePuzzleButton" parent="." unique_id=2095439318 instance=ExtResource("8_rm7uv")]
-position = Vector2(-200, -175)
-collision_layer = 1
-collision_mask = 1
+position = Vector2(-200, -181)
 
 [node name="Player" parent="." unique_id=1575865030 instance=ExtResource("1_wftjt")]
-position = Vector2(-5, 7)
+position = Vector2(0, 15)
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1887775761]

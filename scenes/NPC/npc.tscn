@@ -21,8 +21,10 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_ehwui"]
 font_size = 28
 
-[node name="NPC" type="StaticBody2D" unique_id=1064329577 groups=["interactable"]]
+[node name="NPC" type="StaticBody2D" unique_id=1064329577 groups=["interactable", "jumpable"]]
 process_mode = 3
+collision_layer = 64
+collision_mask = 67
 script = ExtResource("1_0c0is")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=306012510]

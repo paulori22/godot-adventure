@@ -49,6 +49,3 @@ autoplay = "unpressed"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=347214611]
 stream = ExtResource("3_v8p8l")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
