@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://kuqnsv8wjgde"]
+
+[ext_resource type="Script" uid="uid://q64cg4k1g5p6" path="res://scenes/Notification/notification_ui.gd" id="1_ktoc2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ktoc2"]
+font_size = 48
+
+[node name="NotificationCanvasLayer" type="CanvasLayer" unique_id=1591628184]
+script = ExtResource("1_ktoc2")
+
+[node name="Control" type="Control" parent="." unique_id=8316705]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="NotificationLabel" type="Label" parent="Control" unique_id=1538512314]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -223.5
+offset_right = 65.0
+offset_bottom = -200.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Example Notification Text"
+label_settings = SubResource("LabelSettings_ktoc2")
+horizontal_alignment = 1
+vertical_alignment = 1
