@@ -23,7 +23,6 @@ func _physics_process(_delta: float) -> void:
 
 func _has_counting_body() -> bool:
 	for body in get_overlapping_bodies():
-		print(body.name)
 		if _counts_toward_press(body):
 			return true
 	return false
