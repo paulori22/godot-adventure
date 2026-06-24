@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://de4cd4uhnhu68"]
+
+[ext_resource type="Script" uid="uid://dwa3kl3d4h4rq" path="res://scenes/EnemyWaveManager/enemy_wave_manager.gd" id="1_5iw1x"]
+[ext_resource type="PackedScene" uid="uid://kuqnsv8wjgde" path="res://scenes/Notification/notification_ui.tscn" id="2_ye61f"]
+
+[node name="EnemyWaveManager" type="Node2D" unique_id=610252268]
+script = ExtResource("1_5iw1x")
+
+[node name="Timer" type="Timer" parent="." unique_id=1358407507]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=989062637]
+
+[node name="NotificationCanvasLayer" parent="." unique_id=1591628184 instance=ExtResource("2_ye61f")]
