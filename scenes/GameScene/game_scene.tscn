@@ -821,12 +821,11 @@ position = Vector2(255, 9)
 
 [node name="ObstacleLayer" type="TileMapLayer" parent="." unique_id=1373841428]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD7////AAACAAAAAAD1/wEAAAAAAAIAAADz/wUAAAAAAAIAAAD3/wQAAAAAAAIAAAD7/wUAAAAAAAIAAAD3/wcAAAAAAAIAAADy/wgAAAAAAAIAAAAGAAYAAAAAAAIAAAAMAAcAAAAAAAIAAAALAAIAAAAAAAIAAAD8//n/AAAAAAIAAAD4//j/AAAAAAIAAAD1//n/AAAAAAIAAADy//n/AAAAAAIAAADy//f/AAAAAAIAAAD0//b/AAAAAAIAAAD6//X/AAAAAAIAAAD8//b/AAAAAAIAAAAPAPv/AAAAAAIAAADx/wIAAAAAAAIAAAAPAP3/AQAAAAcAAAAVAPH/AAASAAkAAAAVAPL/AAASAAkAAAAVAPP/AAASAAkAAAAVAPT/AAASAAkAAAAVAPX/AAASAAkAAAAVAPb/AAASAAkAAAAVAPf/AAASAAkAAAAVAPj/AAASAAkAAAAVAPn/AAASAAkAAAAVAPr/AAASAAkAAAAVAPv/AAASAAkAAAAVAPz/AAASAAkAAAAVAP3/AAASAAkAAAAVAP7/AAASAAkAAAAVAP//AAASAAkAAAAVAAAAAAASAAkAAAAVAAEAAAASAAkAAAAVAAIAAAASAAkAAAAVAAMAAAASAAkAAAAVAAQAAAASAAkAAAAVAAUAAAASAAkAAAAVAAYAAAASAAkAAAAVAAcAAAASAAkAAAAVAAgAAAASAAkAAAAVAAkAAAASAAkAAAAUAAkAAAASAAkAAAATAAkAAAASAAkAAAASAAkAAAASAAkAAAARAAkAAAASAAkAAAAQAAkAAAASAAkAAAAPAAkAAAASAAkAAAAOAAkAAAASAAkAAAANAAkAAAASAAkAAAAMAAkAAAASAAkAAAALAAkAAAASAAkAAAAKAAkAAAASAAkAAAAJAAkAAAASAAkAAAAIAAkAAAASAAkAAAAHAAkAAAASAAkAAAAGAAkAAAASAAkAAAAFAAkAAAASAAkAAAAEAAkAAAASAAkAAAADAAkAAAASAAkAAAACAAkAAAASAAkAAAABAAkAAAASAAkAAAAAAAkAAAASAAkAAAD//wkAAAASAAkAAAD+/wkAAAASAAkAAAD9/wkAAAASAAkAAAD8/wkAAAASAAkAAAD7/wkAAAASAAkAAAD6/wkAAAASAAkAAAD5/wkAAAASAAkAAAD4/wkAAAASAAkAAAD3/wkAAAASAAkAAAD2/wkAAAASAAkAAAD1/wkAAAASAAkAAAD0/wkAAAASAAkAAADz/wkAAAASAAkAAADy/wkAAAASAAkAAADx/wkAAAASAAkAAADw/wkAAAASAAkAAADv/wkAAAASAAkAAADv/wgAAAASAAkAAADv/wcAAAASAAkAAADv/wYAAAASAAkAAADv/wUAAAASAAkAAADv/wQAAAASAAkAAADv/wMAAAASAAkAAADv/wIAAAASAAkAAADv/wEAAAASAAkAAADv/wAAAAASAAkAAADv////AAASAAkAAADv//7/AAASAAkAAADv//3/AAASAAkAAADv//z/AAASAAkAAADv//v/AAASAAkAAADv//r/AAASAAkAAADv//n/AAASAAkAAADv//j/AAASAAkAAADv//f/AAASAAkAAADv//b/AAASAAkAAADv//X/AAASAAkAAADv//T/AAASAAkAAADv//P/AAASAAkAAADv//L/AAASAAkAAADv//H/AAASAAkAAADw//H/AAASAAkAAADx//H/AAASAAkAAADy//H/AAASAAkAAADz//H/AAASAAkAAAD0//H/AAASAAkAAAD1//H/AAASAAkAAAD2//H/AAASAAkAAAD3//H/AAASAAkAAAD4//H/AAASAAkAAAD5//H/AAASAAkAAAD6//H/AAASAAkAAAD7//H/AAASAAkAAAD8//H/AAASAAkAAAD9//H/AAASAAkAAAD+//H/AAASAAkAAAD///H/AAASAAkAAAAAAPH/AAASAAkAAAABAPH/AAASAAkAAAACAPH/AAASAAkAAAADAPH/AAASAAkAAAAEAPH/AAASAAkAAAAFAPH/AAASAAkAAAAGAPH/AAASAAkAAAAHAPH/AAASAAkAAAAIAPH/AAASAAkAAAAJAPH/AAASAAkAAAAKAPH/AAASAAkAAAALAPH/AAASAAkAAAAMAPH/AAASAAkAAAANAPH/AAASAAkAAAAOAPH/AAASAAkAAAAPAPH/AAASAAkAAAAQAPH/AAASAAkAAAARAPH/AAASAAkAAAASAPH/AAASAAkAAAATAPH/AAASAAkAAAAUAPH/AAASAAkAAAA=")
+tile_map_data = PackedByteArray("AAD7////AAACAAAAAAD1/wEAAAAAAAIAAADz/wUAAAAAAAIAAAD3/wQAAAAAAAIAAAD7/wUAAAAAAAIAAAD3/wcAAAAAAAIAAADy/wgAAAAAAAIAAAAGAAYAAAAAAAIAAAAMAAcAAAAAAAIAAAALAAIAAAAAAAIAAAD8//n/AAAAAAIAAAD4//j/AAAAAAIAAAD1//n/AAAAAAIAAADy//n/AAAAAAIAAADy//f/AAAAAAIAAAD0//b/AAAAAAIAAAD6//X/AAAAAAIAAAD8//b/AAAAAAIAAAAPAPv/AAAAAAIAAADx/wIAAAAAAAIAAAAPAP3/AQAAAAcAAAAVAPH/AAASAAkAAAAVAPL/AAASAAkAAAAVAPP/AAASAAkAAAAVAPT/AAASAAkAAAAVAPX/AAASAAkAAAAVAPb/AAASAAkAAAAVAPf/AAASAAkAAAAVAPj/AAASAAkAAAAVAPn/AAASAAkAAAAVAPr/AAASAAkAAAAVAPv/AAASAAkAAAAVAPz/AAASAAkAAAAVAP3/AAASAAkAAAAVAP7/AAASAAkAAAAVAP//AAASAAkAAAAVAAAAAAASAAkAAAAVAAEAAAASAAkAAAAVAAIAAAASAAkAAAAVAAMAAAASAAkAAAAVAAQAAAASAAkAAAAVAAUAAAASAAkAAAAVAAYAAAASAAkAAAAVAAcAAAASAAkAAAAVAAgAAAASAAkAAAAVAAkAAAASAAkAAAAUAAkAAAASAAkAAAATAAkAAAASAAkAAAASAAkAAAASAAkAAAARAAkAAAASAAkAAAAQAAkAAAASAAkAAAAPAAkAAAASAAkAAAAOAAkAAAASAAkAAAANAAkAAAASAAkAAAAMAAkAAAASAAkAAAALAAkAAAASAAkAAAAKAAkAAAASAAkAAAAJAAkAAAASAAkAAAAIAAkAAAASAAkAAAAHAAkAAAASAAkAAAAGAAkAAAASAAkAAAAFAAkAAAASAAkAAAAEAAkAAAASAAkAAAADAAkAAAASAAkAAAACAAkAAAASAAkAAAABAAkAAAASAAkAAAAAAAkAAAASAAkAAAD//wkAAAASAAkAAAD+/wkAAAASAAkAAAD9/wkAAAASAAkAAAD8/wkAAAASAAkAAAD7/wkAAAASAAkAAAD6/wkAAAASAAkAAAD5/wkAAAASAAkAAAD4/wkAAAASAAkAAAD3/wkAAAASAAkAAAD2/wkAAAASAAkAAAD1/wkAAAASAAkAAAD0/wkAAAASAAkAAADz/wkAAAASAAkAAADy/wkAAAASAAkAAADx/wkAAAASAAkAAADw/wkAAAASAAkAAADv/wkAAAASAAkAAADv/wgAAAASAAkAAADv/wcAAAASAAkAAADv/wYAAAASAAkAAADv/wUAAAASAAkAAADv/wQAAAASAAkAAADv/wMAAAASAAkAAADv/wIAAAASAAkAAADv/wEAAAASAAkAAADv/wAAAAASAAkAAADv////AAASAAkAAADv//7/AAASAAkAAADv//3/AAASAAkAAADv//z/AAASAAkAAADv//v/AAASAAkAAADv//r/AAASAAkAAADv//n/AAASAAkAAADv//j/AAASAAkAAADv//f/AAASAAkAAADv//b/AAASAAkAAADv//X/AAASAAkAAADv//T/AAASAAkAAADv//P/AAASAAkAAADv//L/AAASAAkAAADv//H/AAASAAkAAADw//H/AAASAAkAAADx//H/AAASAAkAAADy//H/AAASAAkAAADz//H/AAASAAkAAAD0//H/AAASAAkAAAD1//H/AAASAAkAAAD2//H/AAASAAkAAAD3//H/AAASAAkAAAD4//H/AAASAAkAAAD5//H/AAASAAkAAAD6//H/AAASAAkAAAD7//H/AAASAAkAAAD8//H/AAASAAkAAAD9//H/AAASAAkAAAD+//H/AAASAAkAAAD///H/AAASAAkAAAAAAPH/AAASAAkAAAABAPH/AAASAAkAAAACAPH/AAASAAkAAAADAPH/AAASAAkAAAAEAPH/AAASAAkAAAAFAPH/AAASAAkAAAAGAPH/AAASAAkAAAAHAPH/AAASAAkAAAAIAPH/AAASAAkAAAAJAPH/AAASAAkAAAAKAPH/AAASAAkAAAALAPH/AAASAAkAAAAMAPH/AAASAAkAAAANAPH/AAASAAkAAAAOAPH/AAASAAkAAAAPAPH/AAASAAkAAAAQAPH/AAASAAkAAAARAPH/AAASAAkAAAASAPH/AAASAAkAAAATAPH/AAASAAkAAAAUAPH/AAASAAkAAAARAPP/AQAAAAcAAAALAPr/AAAAAAIAAAAJAPf/AAAAAAIAAAAJAPn/AAACAAAAAAATAPv/AAAAAAIAAAA=")
 tile_set = SubResource("TileSet_rd1n5")
 
 [node name="Player" parent="ObstacleLayer" unique_id=1575865030 instance=ExtResource("1_nmxv4")]
-position = Vector2(0, 40)
-collision_mask = 65
+position = Vector2(-208, -56)
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="ObstacleLayer/Player" unique_id=992335041]
@@ -838,11 +837,11 @@ limit_bottom = 144
 
 [node name="NPC" parent="ObstacleLayer" unique_id=1064329577 instance=ExtResource("6_6vc3a")]
 position = Vector2(209, -38)
-dialogue_lines = Array[String](["Do you like some puzzles?", "I am not very good at it...", "I can't even get in the cave."])
+dialogue_lines = Array[String](["Do you like some puzzles?", "I am not very good at it...", "I can't even get into cave."])
 
 [node name="NPC2" parent="ObstacleLayer" unique_id=720381713 instance=ExtResource("6_6vc3a")]
 position = Vector2(-57, -88)
-dialogue_lines = Array[String](["I heard rumors that was a cave to the east...", "You should probably chek it out."])
+dialogue_lines = Array[String](["I heard rumors that was a cave to the east...", "You should probably check it out."])
 
 [node name="Sprite2D" parent="ObstacleLayer/NPC2" index="0" unique_id=306012510]
 texture = SubResource("AtlasTexture_d4vg5")
@@ -857,8 +856,8 @@ text = "Hey, did you know there is a cave in the east?"
 text = "Green Ninja"
 
 [node name="NPC3" parent="ObstacleLayer" unique_id=1191204459 instance=ExtResource("6_6vc3a")]
-position = Vector2(58, 84)
-dialogue_lines = Array[String](["Well, something feels not right...", "I feel the cold comming from the north"])
+position = Vector2(120, -176)
+dialogue_lines = Array[String](["There are some slimes protecting the cave ahead", "I heard this cave is dangerous...", "But have some good treasures..."])
 
 [node name="Sprite2D" parent="ObstacleLayer/NPC3" index="0" unique_id=306012510]
 texture = SubResource("AtlasTexture_ll85q")
@@ -873,20 +872,29 @@ text = "You never know, it may get  colder soon"
 text = "Eskimo Ninja"
 
 [node name="SlimeEnemy" parent="ObstacleLayer" unique_id=583216946 instance=ExtResource("11_lk75e")]
-position = Vector2(288, -176)
+position = Vector2(280, -144)
 
 [node name="SlimeEnemy2" parent="ObstacleLayer" unique_id=1148452671 instance=ExtResource("11_lk75e")]
-position = Vector2(240, -208)
+position = Vector2(232, -176)
 
 [node name="SlimeEnemy3" parent="ObstacleLayer" unique_id=1942012169 instance=ExtResource("11_lk75e")]
-position = Vector2(320, -208)
+position = Vector2(312, -176)
 
 [node name="LockedDoor" parent="." unique_id=1765797949 instance=ExtResource("6_jx4ek")]
 position = Vector2(249, -44)
 
+[node name="LockedDoorBattleTrial" parent="." unique_id=1147341956 instance=ExtResource("6_jx4ek")]
+position = Vector2(280, -203)
+buttons_needed = 0
+enemies_needed = 3
+
 [node name="SceneEntrance" parent="." unique_id=2066739663 instance=ExtResource("5_rd1n5")]
 position = Vector2(249, -48)
 next_scene = "res://scenes/DungeonScene/dungeon_scene.tscn"
+
+[node name="SceneEntranceBattleTrial" parent="." unique_id=642752053 instance=ExtResource("5_rd1n5")]
+position = Vector2(280, -208)
+next_scene = "res://scenes/DungeonBattleTrialScene/dungeon_scene_battle_trial.tscn"
 
 [node name="Block" parent="." unique_id=191489946 instance=ExtResource("6_fmroq")]
 position = Vector2(282, 9)
@@ -919,10 +927,14 @@ autoplay = true
 parameters/looping = true
 
 [node name="TreasureChest" parent="." unique_id=460777183 instance=ExtResource("16_lk75e")]
-position = Vector2(288, -208)
+position = Vector2(320, -192)
+chest_name = "game_scene_1"
 
 [connection signal="pressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_pressed"]
 [connection signal="unpressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_unpressed"]
+[connection signal="died" from="ObstacleLayer/SlimeEnemy" to="LockedDoorBattleTrial" method="_on_enemy_died"]
+[connection signal="died" from="ObstacleLayer/SlimeEnemy2" to="LockedDoorBattleTrial" method="_on_enemy_died"]
+[connection signal="died" from="ObstacleLayer/SlimeEnemy3" to="LockedDoorBattleTrial" method="_on_enemy_died"]
 
 [editable path="ObstacleLayer/NPC2"]
 [editable path="ObstacleLayer/NPC3"]

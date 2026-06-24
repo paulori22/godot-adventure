@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://dipv3ewijjxxi"]
+
+[ext_resource type="Script" uid="uid://x15jhfv77xcx" path="res://scenes/EnemyWaveManager/wave_data.gd" id="1_xrwk4"]
+
+[resource]
+script = ExtResource("1_xrwk4")
+enemy_count = 15
+enemy_detect_radius = 180.0
+metadata/_custom_type_script = "uid://c4k8wave7data2"
