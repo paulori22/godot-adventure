@@ -155,7 +155,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_37hii"]
-radius = 2.8627973
+radius = 5.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_segd1"]
 particle_flag_disable_z = true
@@ -187,7 +187,6 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960958320]
 position = Vector2(0, 2)
-scale = Vector2(2.4538968, -1.8692201)
 shape = SubResource("CircleShape2D_37hii")
 
 [node name="DamageSFX" type="AudioStreamPlayer2D" parent="." unique_id=959352887]

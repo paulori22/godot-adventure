@@ -1,16 +1,24 @@
 extends CharacterBody2D
 
+signal died
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var damage_sfx: AudioStreamPlayer2D = $DamageSFX
 @onready var death_particle_effect: GPUParticles2D = $DeathParticleEffect
+@onready var player_detect_collision_shape: CollisionShape2D = $PlayerDetectArea2D/CollisionShape2D
 
 @export var speed: float = 30
 @export var acceleration: float = 5
 @export var hp: int = 2
 @export var max_hp: int = 2
+@export var player_detect_radius: float = 72
 
 var target: Node2D
+
+func _ready() -> void:
+	
+	player_detect_collision_shape.shape.radius = player_detect_radius
 
 func _physics_process(delta: float) -> void:
 	if is_dead():
@@ -72,6 +80,7 @@ func is_dead() -> bool:
 	return hp <= 0;
 
 func die():
+	died.emit()
 	death_particle_effect.emitting = true
 
 	animated_sprite.visible = false
