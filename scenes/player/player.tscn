@@ -483,7 +483,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" unique_id=1575865030]
 collision_layer = 2
-collision_mask = 69
+collision_mask = 101
 script = ExtResource("1_dovo2")
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="." unique_id=177802095]

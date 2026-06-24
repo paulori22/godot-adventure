@@ -30,6 +30,9 @@ var is_attacking: bool = false
 @onready var death_timer: Timer = $DeathTimer
 @onready var take_damage_sfx: AudioStreamPlayer2D = $TakeDamageSFX
 
+@export var invincibility_duration: float = 0.6
+var is_invincible: bool = false
+
 func _ready() -> void:
 	_disable_sword()
 	_update_player_ui()
@@ -204,7 +207,10 @@ func _update_treasure_ui():
 	scroll_ammount_label.text = str(treasure_ammount)
 
 func _on_hit_area_2d_body_entered(body: Node2D) -> void:
-	print(body.name)
+	if is_invincible:
+		return
+	is_invincible = true
+
 	SceneManager.reduce_player_hp(1)
 	play_take_damage_sfx()
 	update_hp_bar()
@@ -222,6 +228,9 @@ func _on_hit_area_2d_body_entered(body: Node2D) -> void:
 	await get_tree().create_timer(0.2).timeout
 	var original_color: Color = Color(1, 1, 1)
 	modulate = original_color
+
+	await get_tree().create_timer(invincibility_duration - 0.2).timeout
+	is_invincible = false
 
 func die():
 	if !death_timer.is_stopped():
