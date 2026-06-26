@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://5rfdbeoxlkom"]
+
+[ext_resource type="Texture2D" uid="uid://cs10537vm7ghd" path="res://assets/Ui/MobileControls/button_circle.png" id="1_hcjb2"]
+[ext_resource type="Texture2D" uid="uid://cyutw66r1vecp" path="res://assets/Ui/MobileControls/button_hexagon.png" id="2_y8ir7"]
+
+[node name="MobileControls" type="CanvasLayer" unique_id=1568814227]
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=772540949]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = -109.0
+offset_right = 115.0
+offset_bottom = -69.0
+grow_vertical = 0
+joystick_size = 150.0
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+
+[node name="RightControls" type="Control" parent="." unique_id=1373896136]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="JumpButton" type="TouchScreenButton" parent="RightControls" unique_id=358406654]
+position = Vector2(-160, -256)
+texture_normal = ExtResource("1_hcjb2")
+action = "jump"
+
+[node name="ActionButton" type="TouchScreenButton" parent="RightControls" unique_id=2083763531]
+position = Vector2(-328, -136)
+texture_normal = ExtResource("2_y8ir7")
+action = "interact"
