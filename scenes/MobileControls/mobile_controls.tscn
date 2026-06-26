@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cs10537vm7ghd" path="res://assets/Ui/MobileControls/button_circle.png" id="1_hcjb2"]
 [ext_resource type="Texture2D" uid="uid://cyutw66r1vecp" path="res://assets/Ui/MobileControls/button_hexagon.png" id="2_y8ir7"]
+[ext_resource type="Script" uid="uid://d1oqtkrnn2ipg" path="res://scenes/MobileControls/mobile_controls.gd" id="3_mctrl"]
 
 [node name="MobileControls" type="CanvasLayer" unique_id=1568814227]
+script = ExtResource("3_mctrl")
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=772540949]
 anchors_preset = 2
