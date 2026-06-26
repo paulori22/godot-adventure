@@ -68,16 +68,11 @@ func start_jump():
 	shadow_sprite.visible = true
 	_set_jump_collision_state(is_jumping)
 
-	if velocity.x > 0:
-		animated_sprite.play("jump_right")
-	elif velocity.x < 0:
-		animated_sprite.play("jump_left")
-	elif velocity.y > 0:
-		animated_sprite.play("jump_down")
-	elif velocity.y < 0:
-		animated_sprite.play("jump_up")
-	else:
+	var direction: String = _get_facing_direction(velocity)
+	if direction == "":
 		animated_sprite.stop()
+	else:
+		animated_sprite.play("jump_" + direction)
 
 func update_jump(delta):
 	jump_time += delta
@@ -141,20 +136,28 @@ func _move_player():
 	if is_jumping:
 		return
 
-	if velocity.x > 0:
-		animated_sprite.play("move_right")
-		_set_interact_area_position(Vector2(5, 2))
-	elif velocity.x < 0:
-		animated_sprite.play("move_left")
-		_set_interact_area_position(Vector2(-5, 2))
-	elif velocity.y > 0:
-		animated_sprite.play("move_down")
-		_set_interact_area_position(Vector2(0, 8))
-	elif velocity.y < 0:
-		animated_sprite.play("move_up")
-		_set_interact_area_position(Vector2(0, -4))
-	else:
+	var direction: String = _get_facing_direction(move_vector)
+	if direction == "":
 		_reset_standing_animation()
+		return
+
+	animated_sprite.play("move_" + direction)
+	match direction:
+		"right":
+			_set_interact_area_position(Vector2(5, 2))
+		"left":
+			_set_interact_area_position(Vector2(-5, 2))
+		"down":
+			_set_interact_area_position(Vector2(0, 8))
+		"up":
+			_set_interact_area_position(Vector2(0, -4))
+
+func _get_facing_direction(vec: Vector2) -> String:
+	if vec == Vector2.ZERO:
+		return ""
+	if abs(vec.x) >= abs(vec.y):
+		return "right" if vec.x > 0 else "left"
+	return "down" if vec.y > 0 else "up"
 
 func _reset_standing_animation() -> void:
 	var anim: String = animated_sprite.animation
